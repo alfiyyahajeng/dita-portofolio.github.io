@@ -2,21 +2,166 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Portofolio Alfiyyah Ajeng Nurardita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Data Analyst | Alfiyyah Ajeng Nurardita</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for professional touch -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Konfigurasi Tailwind untuk tema gelap baru (Ungu) dan aksen Magenta
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#37306B', // Ungu Gelap - Latar Belakang Utama
+                        'secondary-dark': '#66347F', // Ungu Sedang - Latar Belakang Sekunder/Hero
+                        'text-light': '#F9FAFB', // Putih Terang untuk Teks
+                        'accent-magenta': '#9E4784', // Magenta/Ungu Terang - Aksen Utama
+                        'support-pink': '#D27685', // Pink Kecoklatan - Aksen Pendukung/Hover
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Impor font Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
 </head>
-<body>
-    <h1>Selamat Datang di Portofolio Saya</h1>
-    <p>Ini adalah tempat di mana Anda dapat melihat semua proyek Data Analyst saya.</p>
+<body class="bg-primary-dark text-text-light min-h-screen font-sans">
 
-    <h2>Daftar Proyek</h2>
+    <!-- Header & Navigasi -->
+    <header class="bg-secondary-dark shadow-xl sticky top-0 z-10 border-b border-support-pink/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-xl font-extrabold text-accent-magenta tracking-widest uppercase">Alfiyyah A.N.</div>
+            <nav class="space-x-6">
+                <a href="#proyek" class="text-gray-200 hover:text-accent-magenta transition duration-150 font-medium tracking-wide">Proyek</a>
+                <a href="#kontak" class="text-gray-200 hover:text-accent-magenta transition duration-150 font-medium tracking-wide">Kontak</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="project-item">
-        <h3>Proyek Analisis Data 1</h3>
-        <p>Ringkasan singkat tentang tujuan dan hasil proyek ini.</p>
-        <a href="./projects/(Looker) Super_Store_Dashboard.pdf" target="_blank">
-            Lihat Laporan Proyek (PDF)
-        </a>
-    </div>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-    </body>
+        <!-- Section Intro (Hero) - Menggunakan Ungu Sedang sebagai latar belakang -->
+        <section class="text-center py-20 mb-16 bg-secondary-dark rounded-2xl shadow-2xl border-2 border-accent-magenta/50">
+            <div class="inline-block p-4 mb-6 bg-accent-magenta/20 rounded-full border-2 border-accent-magenta">
+                <!-- Ikon Profil Placeholder -->
+                <i data-lucide="bar-chart-3" class="w-12 h-12 text-accent-magenta"></i>
+            </div>
+            <h1 class="text-6xl font-black text-text-light mb-4 leading-tight">Alfiyyah Ajeng Nurardita</h1>
+            <h2 class="text-3xl font-bold mb-8 text-support-pink tracking-wide">Data Analyst | Data Storyteller</h2>
+            <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                Berfokus pada visualisasi data, analisis prediktif, dan mengkonversi kumpulan data kompleks menjadi insight yang dapat ditindaklanjuti untuk mendorong keputusan bisnis yang strategis.
+            </p>
+        </section>
+
+        <!-- Section Daftar Proyek - Kartu Kontras Tinggi -->
+        <section id="proyek" class="mb-20">
+            <h2 class="text-4xl font-extrabold text-support-pink mb-12 text-center relative">
+                Karya Pilihan (Portfolio)
+                <!-- Dekorasi garis di bawah judul -->
+                <span class="block w-20 h-1 bg-accent-magenta mx-auto mt-3 rounded-full"></span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-10 mt-10">
+
+                <!-- Kartu Proyek 1: Super Store Dashboard -->
+                <div class="project-item bg-white p-8 rounded-2xl shadow-xl transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-magenta/30 border-t-4 border-accent-magenta">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <i data-lucide="layout-dashboard" class="w-7 h-7 text-accent-magenta flex-shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark leading-snug">Super Store Dashboard</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-base">
+                        Analisis tren penjualan dan profitabilitas menggunakan Looker Studio untuk menyediakan *dashboard* interaktif yang mendukung keputusan inventaris dan strategi penetapan harga.
+                    </p>
+                    <a href="./projects/(Looker) Super_Store_Dashboard.pdf" target="_blank" class="inline-flex items-center font-semibold text-primary-dark group hover:text-support-pink transition duration-300">
+                        Lihat Laporan (PDF)
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2 transition-all group-hover:translate-x-1"></i>
+                    </a>
+                    <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                        <span class="bg-accent-magenta/20 text-accent-magenta px-4 py-1 rounded-full font-medium">Looker Studio</span>
+                        <span class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full font-medium">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Kartu Proyek 2: Segmentasi Pelanggan -->
+                <div class="project-item bg-white p-8 rounded-2xl shadow-xl transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-magenta/30 border-t-4 border-accent-magenta">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <i data-lucide="bar-chart-2" class="w-7 h-7 text-accent-magenta flex-shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark leading-snug">Segmentasi Pelanggan</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-base">
+                        Analisis clustering untuk mengelompokkan pelanggan berdasarkan perilaku pembelian (RFM Analysis) guna mengoptimalkan strategi marketing.
+                    </p>
+                    <a href="#" target="_blank" class="inline-flex items-center font-semibold text-primary-dark group hover:text-support-pink transition duration-300">
+                        Lihat Notebook (Python)
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2 transition-all group-hover:translate-x-1"></i>
+                    </a>
+                    <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                        <span class="bg-accent-magenta/20 text-accent-magenta px-4 py-1 rounded-full font-medium">Python (Scikit-learn)</span>
+                        <span class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full font-medium">Clustering</span>
+                    </div>
+                </div>
+
+                <!-- Kartu Proyek 3: Optimasi Query Database -->
+                <div class="project-item bg-white p-8 rounded-2xl shadow-xl transition duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-magenta/30 border-t-4 border-accent-magenta">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <i data-lucide="database" class="w-7 h-7 text-accent-magenta flex-shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark leading-snug">Optimasi Query Database</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-base">
+                        Studi kasus untuk merestrukturisasi query SQL yang lambat, menghasilkan pengurangan waktu eksekusi rata-rata sebesar 45% dan meningkatkan efisiensi sistem.
+                    </p>
+                    <a href="#" target="_blank" class="inline-flex items-center font-semibold text-primary-dark group hover:text-support-pink transition duration-300">
+                        Lihat Studi Kasus (Markdown)
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2 transition-all group-hover:translate-x-1"></i>
+                    </a>
+                    <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                        <span class="bg-accent-magenta/20 text-accent-magenta px-4 py-1 rounded-full font-medium">PostgreSQL</span>
+                        <span class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full font-medium">Query Tuning</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section Kontak - Background Ungu Sedang dengan Aksen -->
+        <section id="kontak" class="text-center py-16 bg-secondary-dark rounded-2xl shadow-2xl border border-support-pink/50">
+            <h2 class="text-4xl font-bold text-text-light mb-4">Tertarik Berkolaborasi?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Saya selalu terbuka untuk peluang baru. Jangan ragu untuk menghubungi saya dan mendiskusikan bagaimana analisis data dapat membantu proyek Anda.
+            </p>
+            <div class="flex justify-center space-x-8">
+                <a href="mailto:alfiyyah.email@example.com" class="text-gray-400 hover:text-support-pink transition duration-150 transform hover:scale-110">
+                    <i data-lucide="mail" class="w-10 h-10 mx-auto"></i>
+                    <span class="block mt-2 text-sm">Email</span>
+                </a>
+                <a href="https://linkedin.com/in/alfiyyahajeng" target="_blank" class="text-gray-400 hover:text-support-pink transition duration-150 transform hover:scale-110">
+                    <i data-lucide="linkedin" class="w-10 h-10 mx-auto"></i>
+                    <span class="block mt-2 text-sm">LinkedIn</span>
+                </a>
+                <a href="https://github.com/alfiyyahgithub" target="_blank" class="text-gray-400 hover:text-support-pink transition duration-150 transform hover:scale-110">
+                    <i data-lucide="github" class="w-10 h-10 mx-auto"></i>
+                    <span class="block mt-2 text-sm">GitHub</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white text-center py-6 mt-16 border-t border-support-pink/50">
+        <p class="text-sm text-gray-400">&copy; 2024 Alfiyyah Ajeng Nurardita. Powered by Data and Design.</p>
+    </footer>
+
+    <!-- Inisialisasi Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
